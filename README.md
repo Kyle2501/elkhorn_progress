@@ -1,1 +1,3 @@
 # elkhorn_progress
+
+hi .   
