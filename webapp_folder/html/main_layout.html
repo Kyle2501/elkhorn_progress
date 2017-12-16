@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>{{ page_name }} - Progress</title>
 
 
 <style>
@@ -22,7 +22,15 @@ body { font-family: 'Raleway', sans-serif; color: #777; background-color: #FAFAF
 .elkhorn_wrap img:hover { height: 160px; transition: height 0.5s ease; }
 
 header { }
-.site_name { font-family: 'Libre Baskerville', serif; font-size: 48px; color: #555;  }
+.site_name { font-family: 'Libre Baskerville', serif; font-size: 48px; color: #555; display: inline-block; }
+
+.left_side { margin-top: 5px; display: inline-block; vertical-align: top; }
+.left_side img { width: 65px; }
+
+main { outline: 1px solid #777; width: 650px; margin: 0 auto; min-height: 250px; display: inline-block; margin-top: 15px; }
+
+.page_data {  }
+
 
 </style>
 
@@ -46,13 +54,20 @@ header { }
 
 
 <header>
+  <a href="/"><img style="margin-left:5px;width:75px;" src="../../pics/8zaezz.png" /></a>
   <div class="site_name">Progress</div>
-  hi test
+  <br />hi test
 </header>
 
-<main>
+<aside class="left_side">
+ <img style="margin-left:5px; width:120px;" src="../../pics/noun_305230_cc.png" />
 
-{{ page_html }}
+</aside><!-- . left_side - -->
+
+<main>
+  <div class="page_data">
+    {{ page_html }}
+  </div><!-- . page_data - -->
 
 </main>
 

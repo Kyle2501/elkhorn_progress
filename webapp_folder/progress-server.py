@@ -174,13 +174,17 @@ class publicSite(webapp2.RequestHandler):
       
         html_file = 'main_layout.html'
 
-        page_html = html_file
+        page_html = _html.front_page
+        page_id = ''
+        page_name = 'Front Page'
+        nav_select = ''
         
         
       # -
         if path_layer == 'my_info':
-            page_html = _html.hi_test
+            page_html = _html.user_page + _html.account_page
             page_id = 'my_info'
+            page_name = 'My Info'
             nav_select = 'my_info'
             user_header = 'on'
 
@@ -191,6 +195,14 @@ class publicSite(webapp2.RequestHandler):
             'login_key': login_key,
             'gate': gate,
             'user_name': user_name,
+        
+            'page_id': page_id,
+            'page_name': page_name,
+            'nav_select': nav_select,
+        
+            'page_html': page_html,
+        
+        
         
         }
       # - render
