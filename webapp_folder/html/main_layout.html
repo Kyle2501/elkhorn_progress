@@ -17,6 +17,9 @@ body { font-family: 'Raleway', sans-serif; color: #777; background-color: #FAFAF
 .user_image { margin-right: 5px; }
 .user_image img { border-radius: 50%; width: 40px; height: 40px; }
 
+.elkhorn_wrap { position: fixed; bottom: 5px; right: 10px; }
+.elkhorn_wrap img { height: 40px; transition: height 0.5s ease; }
+.elkhorn_wrap img:hover { height: 160px; transition: height 0.5s ease; }
 
 header { }
 .site_name { font-family: 'Libre Baskerville', serif; font-size: 48px; color: #555;  }
@@ -32,9 +35,12 @@ header { }
       <div class="user_image"><img ng-src="/render_img?client?thumb?[! my_info.client_email !]"></a>
       </div>{% endif %}
       <div class="user_name">
-      {% if user_name != 'No User' %}{{ user_name }}{% endif %}
-    <p><a href="{{ login_key }}">{{ gate }}</a></p>
-    <p><a href="../../my_info">My Info</a></p>
+      {% if user_name != 'No User' %}
+        {{ user_name }}
+        <p><a href="../../my_info">My Info</a></p>
+      {% endif %}
+      <p><a href="{{ login_key }}">{{ gate }}</a></p>
+      
     </div>
   </div><!-- . user_gate - -->
 
@@ -51,6 +57,8 @@ header { }
 </main>
 
 
-
+  <div class="elkhorn_wrap">
+    <a href="http://labs.elkhorn.io/"><img src="../../pics/zaezae.png" /></a>
+  </div><!-- - /elkhorn_wrap - -->
 </body>
 </html>
