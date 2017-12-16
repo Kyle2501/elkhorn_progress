@@ -7,6 +7,16 @@
 
 <style>
 
+body { font-family: 'Raleway', sans-serif; color: #777; background-color: #FAFAFA; padding: 0; margin: 0; }
+
+
+.user_gate { font-size: 12px; text-align: right; position: fixed; top: 10px; right: 10px; vertical-align: top; z-index: 995; }
+.user_gate a { color: blue; text-decoration: none; }
+.user_gate a:visited { color: blue; }
+.user_gate a:hover { text-decoration: underline; }
+.user_image { margin-right: 5px; }
+.user_image img { border-radius: 50%; width: 40px; height: 40px; }
+
 
 
 </style>
@@ -14,7 +24,30 @@
 </head>
 <body>
 
-hi test
+  <div class="user_gate" ng-show="modal=='on'">
+    {% if user_name != 'No User' %}
+    <a href="../../my_info">
+      <div class="user_image"><img ng-src="/render_img?client?thumb?[! my_info.client_email !]"></a>
+      </div>{% endif %}
+      <div class="user_name">
+      {% if user_name != 'No User' %}{{ user_name }}{% endif %}
+    <p><a href="{{ login_key }}">{{ gate }}</a></p>
+    </div>
+  </div><!-- . user_gate - -->
+
+
+<header>hi test</header>
+
+<div>Progress</div>
+
+<main>
+
+
+{{ page_html }}
+
+</main>
+
+
 
 </body>
 </html>
