@@ -18,6 +18,8 @@ body { font-family: 'Raleway', sans-serif; color: #777; background-color: #FAFAF
 .user_image img { border-radius: 50%; width: 40px; height: 40px; }
 
 
+header { }
+.site_name { font-family: 'Libre Baskerville', serif; font-size: 48px; color: #555;  }
 
 </style>
 
@@ -32,16 +34,17 @@ body { font-family: 'Raleway', sans-serif; color: #777; background-color: #FAFAF
       <div class="user_name">
       {% if user_name != 'No User' %}{{ user_name }}{% endif %}
     <p><a href="{{ login_key }}">{{ gate }}</a></p>
+    <p><a href="../../my_info">My Info</a></p>
     </div>
   </div><!-- . user_gate - -->
 
 
-<header>hi test</header>
-
-<div>Progress</div>
+<header>
+  <div class="site_name">Progress</div>
+  hi test
+</header>
 
 <main>
-
 
 {{ page_html }}
 
